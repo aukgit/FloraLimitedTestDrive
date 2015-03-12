@@ -3,8 +3,10 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Web;
 
-namespace FloraLimitedTest.Models {
-    public enum EnumType {
+namespace FloraLimitedTest.Models
+{
+    public enum EnumType
+    {
         [Description("Enum Value 1")]
         EnumValue1 = 1,
         [Description("Enum Value 2")]
@@ -12,8 +14,9 @@ namespace FloraLimitedTest.Models {
         [Description("Enum Value 3")]
         EnumValue3 = 3
     }
-
-    public class Inputs {
+    
+    public class Inputs
+    {
         public bool BoolValue { get; set; }
         public DateTime DateValue { get; set; }
 

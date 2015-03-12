@@ -1,22 +1,27 @@
 using System;
 using System.Configuration;
 
-namespace FloraLimitedTest.Utility {
-    public static class DateTimeExtensions {
-        static string _timeZoneId = ConfigurationManager.AppSettings["TimeZoneId"] ?? "W. Europe Standard Time";
+namespace FloraLimitedTest.Utility
+{
+    public static class DateTimeExtensions
+    {
+        static string timeZoneId = ConfigurationManager.AppSettings["TimeZoneId"] ?? "W. Europe Standard Time";
 
-        public static DateTime ToLocalTime(this DateTime dt) {
+        public static DateTime ToLocalTime(this DateTime dt)
+        {
             // dt.DateTimeKind should be Utc!
-            var tzi = TimeZoneInfo.FindSystemTimeZoneById(_timeZoneId);
+            var tzi = TimeZoneInfo.FindSystemTimeZoneById(timeZoneId);
             return TimeZoneInfo.ConvertTimeFromUtc(DateTime.SpecifyKind(dt, DateTimeKind.Utc), tzi);
         }
 
-        public static DateTime ToUtcTime(this DateTime dt) {
-            var tzi = TimeZoneInfo.FindSystemTimeZoneById(_timeZoneId);
+        public static DateTime ToUtcTime(this DateTime dt)
+        {
+            var tzi = TimeZoneInfo.FindSystemTimeZoneById(timeZoneId);
             return TimeZoneInfo.ConvertTimeToUtc(dt, tzi);
         }
 
-        public static DateTime RoundDown(this DateTime dateTime, int minutes) {
+        public static DateTime RoundDown(this DateTime dateTime, int minutes)
+        {
             return new DateTime(dateTime.Year, dateTime.Month,
                  dateTime.Day, dateTime.Hour, (dateTime.Minute / minutes) * minutes, 0);
         }

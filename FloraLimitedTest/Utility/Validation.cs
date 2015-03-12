@@ -5,8 +5,10 @@ using System.Linq.Expressions;
 using System.Web;
 using System.Web.Mvc;
 
-namespace FloraLimitedTest.Utility {
-    public static class Validation {
+namespace FloraLimitedTest.Utility
+{
+    public static class Validation
+    {
         /// <summary>
         /// Checks the ModelState for an error, and returns the given error string if there is one, or null if there is no error
         /// Used to set class="error" on elements to present the error to the user
@@ -17,15 +19,17 @@ namespace FloraLimitedTest.Utility {
         /// <param name="expression"></param>
         /// <param name="error"></param>
         /// <returns></returns>
-        public static MvcHtmlString ValidationErrorFor<TModel, TProperty>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TProperty>> expression, string error) {
-            if (HasError(htmlHelper, ModelMetadata.FromLambdaExpression(expression, htmlHelper.ViewData), ExpressionHelper.GetExpressionText(expression)))
+        public static MvcHtmlString ValidationErrorFor<TModel, TProperty>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TProperty>> expression, string error)
+        {
+            if (HasError(htmlHelper, ModelMetadata.FromLambdaExpression(expression, htmlHelper.ViewData),ExpressionHelper.GetExpressionText(expression)))
                 return new MvcHtmlString(error);
             else
                 return null;
         }
 
 
-        private static bool HasError(this HtmlHelper htmlHelper, ModelMetadata modelMetadata, string expression) {
+        private static bool HasError(this HtmlHelper htmlHelper, ModelMetadata modelMetadata, string expression)
+        {
             string modelName = htmlHelper.ViewContext.ViewData.TemplateInfo.GetFullHtmlFieldName(expression);
             FormContext formContext = htmlHelper.ViewContext.FormContext;
             if (formContext == null)
