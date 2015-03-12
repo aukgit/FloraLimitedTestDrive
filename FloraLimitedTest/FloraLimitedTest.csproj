@@ -233,6 +233,7 @@
     <Compile Include="Areas\Admin\Controllers\UsersController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BootstrapEditorTemplatesController.cs" />
+    <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\PartialsController.cs" />
     <Compile Include="Controllers\GenericController.cs" />
     <Compile Include="Controllers\BasicController.cs">
@@ -245,25 +246,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Context\NorthwindEntities.cs" />
     <Compile Include="Models\DesignPattern\Interfaces\IDevUserRole.cs" />
     <Compile Include="Models\DesignPattern\Interfaces\IDevUser.cs" />
-    <Compile Include="Models\EntityModel\NorthwindModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NorthwindModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\EntityModel\POCO\Category.cs" />
-    <Compile Include="Models\EntityModel\POCO\Customer.cs" />
-    <Compile Include="Models\EntityModel\POCO\CustomerDemographic.cs" />
-    <Compile Include="Models\EntityModel\POCO\Employee.cs" />
-    <Compile Include="Models\EntityModel\POCO\OrderDetail.cs" />
-    <Compile Include="Models\EntityModel\POCO\Product.cs" />
-    <Compile Include="Models\EntityModel\POCO\ProductOrder.cs" />
-    <Compile Include="Models\EntityModel\POCO\Region.cs" />
-    <Compile Include="Models\EntityModel\POCO\Shipper.cs" />
-    <Compile Include="Models\EntityModel\POCO\Supplier.cs" />
-    <Compile Include="Models\EntityModel\POCO\Territory.cs" />
     <Compile Include="Models\Inputs.cs" />
     <Compile Include="Models\POCO\IdentityCustomization\Country.cs" />
     <Compile Include="Models\POCO\IdentityCustomization\CountryAlternativeName.cs" />
@@ -690,6 +674,7 @@
     <Folder Include="Models\EntityModel\Derivable\" />
     <Folder Include="Models\EntityModel\ExtenedWithCustomMethods\" />
     <Folder Include="Models\EntityModel\Garbage\" />
+    <Folder Include="Models\EntityModel\POCO\" />
     <Folder Include="Models\EntityModel\Structs\" />
     <Folder Include="Models\POCO\AdditionalDatabase\" />
     <Folder Include="Models\POCO\Plugable\" />
@@ -697,20 +682,28 @@
     <Folder Include="Uploads\Files\Private\" />
     <Folder Include="Uploads\Images\Private\" />
     <Folder Include="Views\Basic\" />
+    <Folder Include="Views\Employees\" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Models\EntityModel\NorthwindModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>NorthwindModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\EntityModel\NorthwindModel.edmx.diagram">
-      <DependentUpon>NorthwindModel.edmx</DependentUpon>
-    </Content>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{c51b0967-e339-435a-9f7a-2596bc56dac1}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="BusinessLogicLayer\BusinessLogicLayer.csproj">
+      <Project>{c3eea315-e402-4ee5-a26f-276208081756}</Project>
+      <Name>BusinessLogicLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="EntityLayer\EntityLayer.csproj">
+      <Project>{fbd82fbe-31dd-48e9-ba1e-7e89f742190f}</Project>
+      <Name>EntityLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

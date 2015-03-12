@@ -74,3 +74,11 @@ E:\Working\GitHub\FloraLimitedTestDrive\FloraLimitedTest\bin\System.Web.WebPages
 E:\Working\GitHub\FloraLimitedTestDrive\FloraLimitedTest\obj\Debug\FloraLimitedTest.csprojResolveAssemblyReference.cache
 E:\Working\GitHub\FloraLimitedTestDrive\FloraLimitedTest\obj\Debug\FloraLimitedTest.dll
 E:\Working\GitHub\FloraLimitedTestDrive\FloraLimitedTest\obj\Debug\FloraLimitedTest.pdb
+E:\Working\GitHub\FloraLimitedTestDrive\FloraLimitedTest\bin\FloraSampleDb.mdf
+E:\Working\GitHub\FloraLimitedTestDrive\FloraLimitedTest\bin\FloraSampleDb_log.ldf
+E:\Working\GitHub\FloraLimitedTestDrive\FloraLimitedTest\bin\BusinessLogicLayer.dll
+E:\Working\GitHub\FloraLimitedTestDrive\FloraLimitedTest\bin\DataAccessLayer.dll
+E:\Working\GitHub\FloraLimitedTestDrive\FloraLimitedTest\bin\EntityLayer.dll
+E:\Working\GitHub\FloraLimitedTestDrive\FloraLimitedTest\bin\DataAccessLayer.pdb
+E:\Working\GitHub\FloraLimitedTestDrive\FloraLimitedTest\bin\BusinessLogicLayer.pdb
+E:\Working\GitHub\FloraLimitedTestDrive\FloraLimitedTest\bin\EntityLayer.pdb
